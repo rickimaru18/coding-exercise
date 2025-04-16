@@ -1,0 +1,18 @@
+sequenceDiagram
+    participant App
+    participant Backend
+    participant Stripe
+    
+    App->>Backend: Subscribe
+    Backend->>Stripe: Create Stripe subscription
+    Stripe-->>Backend: subscription data
+    Backend->>Backend: Store user's Stripe [customerId]
+    Backend-->>App: paymentIntentClientSecret
+    App->>App: Show payment sheet using [paymentIntentClientSecret]
+    App->>Stripe: Handle payment
+    App->>Backend: Check subscription status
+    Backend->>Backend: Get user's Stripe [customerId]
+    Backend->>Stripe: Get subscription status using [customerId]
+    Stripe-->>Backend: subscription status
+    Backend->>Backend: Update user subscription status using [customerId]
+    Backend-->>App: Subscription status
