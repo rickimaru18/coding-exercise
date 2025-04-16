@@ -46,13 +46,16 @@ Has a Flutter plugin, web and server SDK.
 - More SDKs: https://docs.stripe.com/sdks
 
 Here's a high level design for the subscription flow using Stripe.
-<img src="umls/stripe_subscription_flow.png" alt="flow" width="200"/>
+
+<img src="umls/stripe_subscription_flow.png" alt="flow" width="600"/>
 
 For the subscription status background update.
-<img src="umls/stripe_status_update_flow.png" alt="flow" width="200"/>
 
-And here's the flow when accessing app content
-<img src="umls/stripe_content_access_flow.png" alt="flow" width="200"/>
+<img src="umls/stripe_status_update_flow.png" alt="flow" width="600"/>
+
+And here's the flow when accessing app content.
+
+<img src="umls/stripe_content_access_flow.png" alt="flow" width="600"/>
 
 ---
 #### Other providers
