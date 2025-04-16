@@ -6,17 +6,21 @@ Added migration file to implement policy,
 ### Testing `POLICY`
 
 By running `supabase test db`.
+
 <img src="images/policy_test_result.png" alt="flow" width="600"/>
 
 ### Testing using sample data
 
 Checking if correct `auth ID` is set.
+
 <img src="images/add_courses_likes_policy_test_1.png" alt="flow" width="600"/>
 
 Checking if selecting all rows in `courses_likes` table will only return authenticated user data.
+
 <img src="images/add_courses_likes_policy_test_2.png" alt="flow" width="600"/>
 
 Lastly, checking when role is reverted back to `postgres`, it will show all rows of `courses_likes`.
+
 <img src="images/add_courses_likes_policy_test_3.png" alt="flow" width="600"/>
 
 #### Also, here's the `users` rows for reference.
