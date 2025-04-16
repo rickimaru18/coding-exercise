@@ -32,7 +32,7 @@ In this document, it will focus more on using Stripe and the subscription scenar
 
 ### Subscription flow
 ---
-![Alt text](umls/subscription_flow.png)
+<img src="umls/subscription_flow.png" alt="flow" width="200"/>
 
 ### Payment provider
 ---
@@ -46,13 +46,13 @@ Has a Flutter plugin, web and server SDK.
 - More SDKs: https://docs.stripe.com/sdks
 
 Here's a high level design for the subscription flow using Stripe.
-![Alt text](umls/stripe_subscription_flow.png)
+<img src="umls/stripe_subscription_flow.png" alt="flow" width="200"/>
 
 For the subscription status background update.
-![Alt text](umls/stripe_status_update_flow.png)
+<img src="umls/stripe_status_update_flow.png" alt="flow" width="200"/>
 
 And here's the flow when accessing app content
-![Alt text](umls/stripe_content_access_flow.png)
+<img src="umls/stripe_content_access_flow.png" alt="flow" width="200"/>
 
 ---
 #### Other providers
