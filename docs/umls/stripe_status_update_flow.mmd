@@ -1,0 +1,8 @@
+sequenceDiagram
+    participant Backend
+    participant Stripe
+    
+    Backend->>Backend: Setup Stripe webhook
+    Stripe-)Backend: Subscription events (via webhook)
+    Backend->>Backend: Parse [customerId] in event
+    Backend-)Backend: Update user's subscription status using [customerId]

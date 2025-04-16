@@ -1,0 +1,8 @@
+flowchart
+    A([Login / Register]) --> V[View app content]
+    V --> U[Use app content]
+    U --> C{Is subscribed}
+    C -- Yes --> P[Play app content]
+    C -- No --> S[Subscription]
+    S -- Subscribed --> P
+    S -- Cancelled --> V

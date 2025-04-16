@@ -1,0 +1,18 @@
+sequenceDiagram
+    participant App
+    participant Backend
+    participant Stripe
+    
+    App->>App: View app content
+    App->>App: Use app content
+    App->>Backend: Check subscription status
+    Backend->>Backend: Get user's Stripe [customerId]
+    Backend->>Stripe: Get subscription status using [customerId]
+    Stripe-->>Backend: subscription status
+    Backend->>Backend: Update user subscription status using [customerId]
+    Backend-->>App: Subscription status
+    alt [Is subscribed]
+        App->>App: Proceed using app content
+    else
+        App->>App: Show subscription UI
+    end
